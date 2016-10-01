@@ -12,7 +12,7 @@
     tools:context="com.example.lucky.readonchandler.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/manual_id"
+        android:id="@+id/manual_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_main_button_view_height"
         android:layout_alignParentTop="true"
@@ -40,8 +40,8 @@
 
 
     <RelativeLayout
-        android:id="@+id/event_id"
-        android:layout_below="@id/manual_id"
+        android:id="@+id/nearby_layout"
+        android:layout_below="@id/manual_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_main_button_view_height"
         android:layout_alignParentTop="true"
@@ -69,8 +69,8 @@
 
 
     <RelativeLayout
-        android:id="@+id/calendar"
-        android:layout_below="@id/event_id"
+        android:id="@+id/calendar_layout"
+        android:layout_below="@id/nearby_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_main_button_view_height"
         android:layout_alignParentTop="true"
