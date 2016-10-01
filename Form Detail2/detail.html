@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+<<<<<<< HEAD:Form Detail2/detail.html
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="">
@@ -39,8 +40,45 @@
 				<label for="remember">
 					<input id="remember" type="checkbox"> Remember me
 				</label>
+=======
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Form</title>
+        <meta name="author" content="SitePoint">
+        <meta name="description" content="The HTML5 Herald">
+        <link rel="stylesheet" href="t.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>-->
+    </head>
 
-			</fieldset>
-		</form>
-	</body>
+    <body>
+        <form class="pure-form" action="out.json" enctype='application/json' method="POST">
+            <fieldset>
+                <legend>Enter Event Data</legend>
+                First Name:<br/>
+                <input type="text" name="firstname" placeholder="First Name"><br/>
+                <br/>Last Name:<br/>
+                <input type="text" name="lastname" placeholder="Last Name"><br/>
+                <br/>Date:<br/>
+                <input type="date" name="Date" placeholder="Date"><br/>
+                <br/>Time:<br/>
+                <input type="time" name="Time" placeholder="Time"><br/>
+                <br/>Location:<br/>
+                <input type="text" name="Location" placeholder="Location"><br/>
+                <br/>Description:<br/>
+                <textarea rows="4" cols="50" 
+                    placeholder="Enter event description.">
+                </textarea>
+                <br/><br/>
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                <label for="remember">
+                    <input id="remember" type="checkbox"> Remember me
+                </label>
+>>>>>>> ea4837b4f7ed67669b97069347d7862695df6012:t.html
+
+            </fieldset>
+        </form>
+    </body>
 </html>
