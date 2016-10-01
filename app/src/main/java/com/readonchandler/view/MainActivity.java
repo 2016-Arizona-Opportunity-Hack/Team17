@@ -1,11 +1,12 @@
 package com.readonchandler.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.example.lucky.readonchandler.R;
+import com.readonchandler.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.calendar_layout:
-
+                startActivity(new Intent(this,CalendarActivty.class));
                 break;
         }
     }

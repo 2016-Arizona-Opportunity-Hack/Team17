@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.readonchandler.view.CalendarActivty">
+
+    <CalendarView
+        android:id="@+id/calendarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </CalendarView>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@id/calendarId"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calender_view_eventlist_divider_height"
+        android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginRight="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:background="@color/colorLightGrey"></View>
+
+    <TextView
+        android:id="@+id/eventTextId"
+        android:layout_below="@id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="EVENTS"/>
+
+    <ListView
+        android:id="@+id/eventsListView"
+        android:layout_below="@id/eventTextId"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent">
+    </ListView>
+
+</RelativeLayout>
