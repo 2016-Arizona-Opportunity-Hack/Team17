@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="">
+		<meta name="description" content="Obtains event information.">
+
+		<title>Form</title>
+
+		<link rel="stylesheet" href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css">
+		<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$( function() {
+			$( "#tabs" ).tabs();
+			} );
+		</script>
+	</head>
+
+	<body>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Event</a></li>
+				<li><a href="#tabs-2">Manual</a></li>
+			</ul>
+			<div id="tabs-1">
+				<form class="pure-form" action="#" enctype='application/json' method="POST">
+					<fieldset>
+						<legend>Enter Event Data</legend>
+						Event Details:<br/>
+						<textarea rows="4" cols="50" 
+							placeholder="Enter event description.">
+						</textarea>
+						<br/><br/>
+						<button type="submit" class="pure-button pure-button-primary">Submit</button>
+					</fieldset>
+				</form>
+			</div>
+			<div id="tabs-2">
+				<input type="text" name="firstname" placeholder="First Name"><br/>
+				  <button class="ui-button ui-widget ui-corner-all">Button with only text
+				  <img></img>
+				  </button>
+			</div>
+
+		</div>
+
+	</body>
+</html>
