@@ -1,7 +1,9 @@
-package com.example.lucky.readonchandler;
+package com.readonchandler.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.readonchandler.view.readonchandler.R;
 
 public class MainActivity extends AppCompatActivity {
 

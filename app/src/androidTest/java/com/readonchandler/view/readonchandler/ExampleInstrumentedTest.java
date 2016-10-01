@@ -1,4 +1,4 @@
-package com.example.lucky.readonchandler;
+package com.readonchandler.view.readonchandler;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
