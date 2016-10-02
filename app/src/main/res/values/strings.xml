@@ -2,4 +2,6 @@
     <string name="app_name">ReadOnChandler</string>
     <!--Main Screen strings-->
     <string name="manual">Manual</string>
+    <string name="events">Events</string>
+    <string name="calendar">Calendar</string>
 </resources>
