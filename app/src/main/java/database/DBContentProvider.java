@@ -95,6 +95,7 @@ public class DBContentProvider {
 
     public static synchronized List<Manual> getAllManuals(SQLiteDatabase sqLiteDatabase){
         List<Manual> manuals = new ArrayList<Manual>();
+
         Cursor cursor = sqLiteDatabase.query(DatabaseContract.Manual.TABLE_NAME, new String[]{}, null, null, null, null, null);
         if(cursor != null){
             cursor.moveToFirst();

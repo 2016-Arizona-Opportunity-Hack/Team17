@@ -9,9 +9,11 @@
         android:layout_marginTop="@dimen/calender_view_eventlist_divider_margin_left_right"
         android:layout_marginBottom="@dimen/calender_view_eventlist_divider_margin_left_right"
         android:layout_height="@dimen/detailview_video_height"
+        android:background="@drawable/detail"
         android:layout_width="fill_parent" />
 
     <TextView
+        android:id="@+id/detailTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/readWidMe"
@@ -21,6 +23,7 @@
         android:layout_marginTop="@dimen/calender_view_eventlist_divider_margin_left_right"
         android:layout_marginBottom="@dimen/calender_view_eventlist_divider_margin_left_right"/>
     <TextView
+        android:id="@+id/detailTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1PM - 2PM"
@@ -29,6 +32,7 @@
         android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
         android:layout_marginBottom="@dimen/calender_view_eventlist_divider_margin_left_right"/>
     <TextView
+        android:id="@+id/detailtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"

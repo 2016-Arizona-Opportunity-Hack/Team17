@@ -9,6 +9,7 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -20,6 +21,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.readonchandler.R;
 
@@ -30,7 +32,7 @@ import database.DBContentProvider;
 import database.DBHelper;
 import model.Event;
 
-public class NearByActivity extends FragmentActivity implements OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
+public class NearByActivity extends FragmentActivity implements OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback, GoogleMap.OnInfoWindowClickListener {
 
     private boolean isGPSEnabled;
     private GoogleMap mMap;
@@ -77,6 +79,7 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         updateMaps();
+        mMap.setOnInfoWindowClickListener(this);
     }
 
     @Override
@@ -114,7 +117,7 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
                     zoomLatitude = events.get(i).getLatitude();
                     zoomLongitude = events.get(i).getLongitude();
                 }
-                mMap.addMarker(new MarkerOptions().position(new LatLng(events.get(i).getLatitude(), events.get(i).getLongitude())).title("Event 1"+"\n"+"date: 5 oct"+"\n"+"Time 08:30 AM"+"\n"+"Location Tempe"));
+                mMap.addMarker(new MarkerOptions().position(new LatLng(events.get(i).getLatitude(), events.get(i).getLongitude())).title(events.get(i).getName()).snippet(events.get(i).getDate()+" "+events.get(i).getTime()));
             }
         }
         CameraUpdate camerupdate = CameraUpdateFactory.newLatLngZoom(new LatLng(zoomLatitude, zoomLongitude), 10);
@@ -136,6 +139,12 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
             }
 
         }
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Log.d("tag", "something");
+
     }
 
     private class LocationInfo {

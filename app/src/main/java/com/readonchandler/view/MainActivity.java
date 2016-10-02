@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DBHelper.getInstance(this);
         Bundle data = getIntent().getExtras();
         manualLayout = (RelativeLayout) findViewById(R.id.manual_layout);
         nearbyLayout = (RelativeLayout) findViewById(R.id.nearby_layout);
