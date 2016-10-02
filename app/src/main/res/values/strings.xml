@@ -4,6 +4,7 @@
     <string name="manual">Manual</string>
     <string name="events">Events</string>
     <string name="calendar">Calendar</string>
+    <string name="detail">Details</string>
     <string name="title_activity_near_by">NearBy</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC8pIOIzptLf-RhIWpgg0cBXAHNJ_kzl4c</string>
 
@@ -12,5 +13,9 @@
     <string name="manual_building_blocks">Building Blocks of Arizona:\nhttp://www.azed.gov/early-childhood/files/2016/05/buildingblockswhat-we-know-works-read-on-az-ece-summer-conf.final_.pdf</string>
     <string name="manual_childcare">Child care guide:\nhttp://readonarizona.org/wp-content/themes/read-on/PDF/ROAEarlyLiteracyGuideforFamiliesv.1.pdf</string>
     <string name="manual_early_parenting">Literarcy traing for parents:\nhttp://readonarizona.org/wp-content/themes/read-on/PDF/ROAEarlyLiteracyGuideforFamiliesv.1.pdf</string>
+
+    <!--Deatil view-->
+    <string name="detail_text">Reading is vital to a child’s ability to learn and be successful in school. Your child’s ability to read develops from birth, but it doesn’t happen automatically. Children’s brains are not pre-wired for reading. When they hear and use language, their brains develop the important connections needed to learn how to read.Tell stories and encourage conversation; make it interactive and fun. Parents need to support a strong development of home language skills so that students enter school prepared with the core knowledge and vocabulary in their home language that will help them to thrive.</string>
+    <string name="readWidMe">Read WithMe </string>
 
 </resources>

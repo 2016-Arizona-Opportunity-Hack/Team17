@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (id){
             case R.id.manual_layout:
-                Intent manualIntent = new Intent(this, Manuals.class);
+                Intent manualIntent = new Intent(this, DetailActivty.class);
                 startActivity(manualIntent);
                 break;
 
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.calendar_layout:
                 startActivity(new Intent(this,CalendarActivty.class));
                 break;
+
         }
     }
 }

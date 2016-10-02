@@ -18,4 +18,8 @@
 
     <!--manual dimens-->
     <dimen name="manual_main_text_view_size">20dp</dimen>
+
+    <!--Detail View-->
+    <dimen name="detailview_video_height">250dp</dimen>
+
 </resources>

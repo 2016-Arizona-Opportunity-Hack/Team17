@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginRight="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginTop="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginBottom="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_height="@dimen/detailview_video_height"
+        android:layout_width="fill_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/readWidMe"
+        android:textStyle="bold"
+        android:textSize="@dimen/manual_main_text_view_size"
+        android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginTop="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginBottom="@dimen/calender_view_eventlist_divider_margin_left_right"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1PM - 2PM"
+        android:textStyle="bold"
+        android:textSize="@dimen/manual_main_text_view_size"
+        android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginBottom="@dimen/calender_view_eventlist_divider_margin_left_right"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginRight="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginTop="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginBottom="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:text="@string/detail_text"/>
+
+</LinearLayout>
