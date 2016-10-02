@@ -38,17 +38,34 @@
             </li>
         </ul>
         <div id="tabs-1">
-            <form action="#" class="pure-form" enctype='application/json'
-            method="post">
-                <fieldset>
-                    <legend>Enter Event Data</legend> Event Details:<br>
-                    <textarea cols="50" placeholder="Enter event description."
-                    rows="4"></textarea><br>
-                    <br>
-                    <button class="pure-button pure-button-primary" type=
-                    "submit">Submit</button>
-                </fieldset>
-            </form>
+    <form action="out.json" class="pure-form" enctype='application/json'
+    method="post">
+        <fieldset>
+            <legend>Enter Event Data</legend>
+            Event Name:<br>
+            <input name="firstname" placeholder="Event Name" type="text"><br>
+            <br>
+            Date:<br>
+            <input name="Date" placeholder="Date" type="text"><br>
+            <br>
+            Time:<br>
+            <input name="Time" placeholder="Time" type="text"><br>
+            <br>
+            Location:<br>
+            <input name="Location" placeholder="Location" type="text"><br>
+            <br>
+            Description:<br>
+            <textarea cols="50" placeholder="Enter event description." rows=
+            "4"></textarea><br>
+            <br>
+            Video Link:<br>
+            <input type="text" cols="50" placeholder="Enter video link." rows=
+            "4"></input><br>
+            <br>
+            <button class="pure-button pure-button-primary" type=
+            "submit">Submit</button>
+        </fieldset>
+    </form>
         </div>
         <div id="tabs-2" class="input_fields_wrap">
             <form action="#" class="pure-form" enctype='application/json' method="post">
