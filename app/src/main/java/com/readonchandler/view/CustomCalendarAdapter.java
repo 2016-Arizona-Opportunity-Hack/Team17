@@ -12,6 +12,8 @@ import com.readonchandler.R;
 
 import java.util.List;
 
+import model.Event;
+
 /**
  * Created by Lakshmisagar on 10/1/2016.
  */
@@ -22,7 +24,7 @@ public class CustomCalendarAdapter extends BaseAdapter {
     LayoutInflater inflater;
     private List<EventsModel> events_list;
 
-    public CustomCalendarAdapter(Context context, List<EventsModel> events) {
+    public CustomCalendarAdapter(Context context, List<Event> events) {
         mContext = context;
         events_list = events;
     }

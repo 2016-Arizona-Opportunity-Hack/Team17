@@ -9,6 +9,8 @@ import android.widget.RelativeLayout;
 
 import com.readonchandler.R;
 
+import model.Manual;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     protected RelativeLayout manualLayout;
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (id){
             case R.id.manual_layout:
-                Intent manualIntent = new Intent(this, DetailActivty.class);
+                Intent manualIntent = new Intent(this, Manual.class);
                 startActivity(manualIntent);
                 break;
 
