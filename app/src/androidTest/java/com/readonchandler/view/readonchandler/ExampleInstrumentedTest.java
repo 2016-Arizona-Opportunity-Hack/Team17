@@ -1,4 +1,4 @@
-package com.example.lucky.readonchandler;
+package com.readonchandler.view.readonchandler;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.lucky.readonchandler", appContext.getPackageName());
+        assertEquals("com.readonchandler", appContext.getPackageName());
     }
 }

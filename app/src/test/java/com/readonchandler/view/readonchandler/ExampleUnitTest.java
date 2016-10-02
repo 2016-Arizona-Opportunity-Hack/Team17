@@ -1,4 +1,4 @@
-package com.example.lucky.readonchandler;
+package com.readonchandler.view.readonchandler;
 
 import org.junit.Test;
 

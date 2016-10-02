@@ -4,7 +4,22 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!--Main Screen dimens-->
-    <dimen name="activity_main_button_view_height">50dp</dimen>
-    <dimen name="activity_main_image_view_height">30dp</dimen>
-    <dimen name="activity_main_text_view_size">20dp</dimen>
+    <dimen name="activity_main_button_view_height">100dp</dimen>
+    <dimen name="activity_main_image_view_height">60dp</dimen>
+    <dimen name="activity_main_text_view_size">40dp</dimen>
+    <dimen name="activity_main_button_view_margin">10dp</dimen>
+    <dimen name="activity_main_image_view_left_margin">10dp</dimen>
+
+    <!--Calender view dimens-->
+    <dimen name="calender_view_eventlist_divider_height">1dp</dimen>
+    <dimen name="calender_view_eventlist_divider_margin_left_right">12dp</dimen>
+    <dimen name="calendar_row_title_view_size">12dp</dimen>
+    <dimen name="calendar_row_time_view_size">9dp</dimen>
+
+    <!--manual dimens-->
+    <dimen name="manual_main_text_view_size">20dp</dimen>
+
+    <!--Detail View-->
+    <dimen name="detailview_video_height">250dp</dimen>
+
 </resources>
