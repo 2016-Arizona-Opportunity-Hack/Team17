@@ -1,46 +1,48 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="author" content="">
-		<meta name="description" content="The HTML5 Herald">
-		
-		<title>Form with tabs</title>
-		
-		<link rel="stylesheet" href="t.css">
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-		<link rel="stylesheet" href="css/styles.css?v=1.0">
-		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>-->
-	</head>
-
-	<body>
-		<form class="pure-form" action="out.json" enctype='application/json' method="POST">
-			<fieldset>
-				<legend>Enter Event Data</legend>
-				First Name:<br/>
-				<input type="text" name="firstname" placeholder="First Name"><br/>
-				<br/>Last Name:<br/>
-				<input type="text" name="lastname" placeholder="Last Name"><br/>
-				<br/><br/><br/>Event Name:<br/>
-				<input type="text" name="firstname" placeholder="Event Name"><br/>
-				<br/>Date:<br/>
-				<input type="text" name="Date" placeholder="Date"><br/>
-				<br/>Time:<br/>
-				<input type="text" name="Time" placeholder="Time"><br/>
-				<br/>Location:<br/>
-				<input type="text" name="Location" placeholder="Location"><br/>
-				<br/>Description:<br/>
-				<textarea rows="4" cols="50" 
-					placeholder="Enter event description.">
-				</textarea>
-				<br/><br/>
-				<button type="submit" class="pure-button pure-button-primary">Submit</button>
-				<label for="remember">
-					<input id="remember" type="checkbox"> Remember me
-				</label>
-
-            </fieldset>
-        </form>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta content="" name="author">
+    <meta content="The HTML5 Herald" name="description">
+    <title>Form with tabs</title>
+    <link href="t.css" rel="stylesheet">
+    <link href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" rel=
+    "stylesheet">
+    <link href="css/styles.css?v=1.0" rel="stylesheet">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>-->
+</head>
+<body>
+    <form action="out.json" class="pure-form" enctype='application/json'
+    method="post">
+        <fieldset>
+            <legend>Enter Event Data</legend> First Name:<br>
+            <input name="firstname" placeholder="First Name" type="text"><br>
+            <br>
+            Last Name:<br>
+            <input name="lastname" placeholder="Last Name" type="text"><br>
+            <br>
+            <br>
+            <br>
+            Event Name:<br>
+            <input name="firstname" placeholder="Event Name" type="text"><br>
+            <br>
+            Date:<br>
+            <input name="Date" placeholder="Date" type="text"><br>
+            <br>
+            Time:<br>
+            <input name="Time" placeholder="Time" type="text"><br>
+            <br>
+            Location:<br>
+            <input name="Location" placeholder="Location" type="text"><br>
+            <br>
+            Description:<br>
+            <textarea cols="50" placeholder="Enter event description." rows=
+            "4"></textarea><br>
+            <br>
+            <button class="pure-button pure-button-primary" type=
+            "submit">Submit</button> <label for="remember"><input id="remember"
+            type="checkbox"> Remember me</label>
+        </fieldset>
+    </form>
+</body>
 </html>

@@ -1,52 +1,66 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="author" content="">
-		<meta name="description" content="Obtains event information.">
+<head>
+    <title>jQuery add / remove textbox example</title>
+    <meta charset="utf-8">
+    <meta content="" name="author">
+    <meta content="Obtains event information." name="description">
+    <title>Form</title>
+    <!-- libraries -->
+    <link href="../lib/font-awesome-4.6.3/css/font-awesome.min.css" rel=
+    "stylesheet">
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css" rel="stylesheet">
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css" rel="stylesheet">
+    <link href="../lib/jquery-ui-1.12.1.custom/jquery-3.1.1.min.js" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- tabs ui -->
 
-		<title>Form</title>
 
-		<link rel="stylesheet" href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css">
-		<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
-		<link rel="stylesheet" href="/resources/demos/style.css">
-		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script>
-			$( function() {
-			$( "#tabs" ).tabs();
-			} );
-		</script>
-	</head>
 
-	<body>
-		<div id="tabs">
-			<ul>
-				<li><a href="#tabs-1">Event</a></li>
-				<li><a href="#tabs-2">Manual</a></li>
-			</ul>
-			<div id="tabs-1">
-				<form class="pure-form" action="#" enctype='application/json' method="POST">
-					<fieldset>
-						<legend>Enter Event Data</legend>
-						Event Details:<br/>
-						<textarea rows="4" cols="50" 
-							placeholder="Enter event description.">
-						</textarea>
-						<br/><br/>
-						<button type="submit" class="pure-button pure-button-primary">Submit</button>
-					</fieldset>
-				</form>
-			</div>
-			<div id="tabs-2">
-				<input type="text" name="firstname" placeholder="First Name"><br/>
-				  <button class="ui-button ui-widget ui-corner-all">Button with only text
-				  <img></img>
-				  </button>
-			</div>
-
-		</div>
-
-	</body>
+    
+    <!-- internals -->
+    <link href="tab.js" rel="stylesheet">
+    <script>
+            $( function() {
+            $( "#tabs" ).tabs();
+            } );
+    </script>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li>
+                <a href="#tabs-1">Event</a>
+            </li>
+            <li>
+                <a href="#tabs-2">Manual</a>
+            </li>
+        </ul>
+        <div id="tabs-1">
+            <form action="#" class="pure-form" enctype='application/json'
+            method="post">
+                <fieldset>
+                    <legend>Enter Event Data</legend> Event Details:<br>
+                    <textarea cols="50" placeholder="Enter event description."
+                    rows="4"></textarea><br>
+                    <br>
+                    <button class="pure-button pure-button-primary" type=
+                    "submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+        <div id="tabs-2" class="input_fields_wrap">
+            <form action="#" class="pure-form" enctype='application/json' method="post">
+	            <div class="input_fields_wrap">
+		            <button class="add_field_button">Add More Fields</button>
+		            <input type="text" name="firstname" placeholder="First Name" >
+		            <i class="fa fa-plus-square" aria-hidden="true"></i>
+	            </div>
+	            <button class="ui-button ui-widget ui-corner-all">submit</button>
+	            <br/><br/>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
