@@ -13,4 +13,6 @@
     <!--Calender view dimens-->
     <dimen name="calender_view_eventlist_divider_height">1dp</dimen>
     <dimen name="calender_view_eventlist_divider_margin_left_right">12dp</dimen>
+    <dimen name="calendar_row_title_view_size">12dp</dimen>
+    <dimen name="calendar_row_time_view_size">9dp</dimen>
 </resources>
