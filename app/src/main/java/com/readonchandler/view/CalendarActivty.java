@@ -44,14 +44,11 @@ public class CalendarActivty extends AppCompatActivity {
         //TODO - DELETE temporary create data
         Date cDate = new Date();
         String date = new SimpleDateFormat("yyyy-MM-dd").format(cDate);
+        listView = (ListView) findViewById(R.id.eventsListView);
 
         adapter = new CustomCalendarAdapter(mContext, getEventsdata(date));
         listView.setAdapter(adapter);
         Log.d(TAG,eventList+"");
-        for (int i = 0; i < 5; i++) {
-            Log.d(TAG,eventList.get(i).getName()+" "+eventList.get(i).getTime());
-        }
-        listView = (ListView) findViewById(R.id.eventsListView);
 
         mCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override

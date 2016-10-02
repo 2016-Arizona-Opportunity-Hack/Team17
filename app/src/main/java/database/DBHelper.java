@@ -44,7 +44,7 @@ public class DBHelper extends SQLiteOpenHelper {
             DatabaseContract.Events.COLUMN_NAME_LATITUDE+" REAL "+COMMA_SEPARATOR+
             DatabaseContract.Events.COLUMN_NAME_LONGITUDE+" REAL "+COMMA_SEPARATOR+
             DatabaseContract.Events.COLUMN_NAME_VIDEO_LINK+" TEXT "+COMMA_SEPARATOR+
-            DatabaseContract.Events.COLUMN_NAME_EVENT_DETAILS+"TEXT"+COMMA_SEPARATOR+
+            DatabaseContract.Events.COLUMN_NAME_EVENT_DETAILS+" TEXT"+COMMA_SEPARATOR+
             DatabaseContract.Events.COLUMN_NAME_TIME+" TEXT "+
             CLOSE_BRACE;
 

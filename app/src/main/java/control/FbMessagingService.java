@@ -33,9 +33,14 @@ public class FbMessagingService extends FirebaseMessagingService {
         //Added the parsing logic
         if (remoteMessage.getData().size() > 0) {
             message = message+"Message data payload: " + remoteMessage.getData();
-            String string = remoteMessage.getData().toString();
-            String [] result = string.split(",");
+        }
+
+        // Check if message contains a notification payload.
+        if (remoteMessage.getNotification() != null) {
+            String actualMessage =  remoteMessage.getNotification().getBody();
+            String [] result = actualMessage.split(",");
             int i = 0;
+            event = new Event();
             if(result[i++].equals("Event")) {
                 event.setName(result[i++]);
                 event.setDate(result[i++]);
@@ -52,12 +57,6 @@ public class FbMessagingService extends FirebaseMessagingService {
                 DBContentProvider.insertManual(db,manual);
             }
         }
-
-        // Check if message contains a notification payload.
-        if (remoteMessage.getNotification() != null) {
-            message = message+"Message Notification Body: " + remoteMessage.getNotification().getBody();
-        }
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
     }
 
     @Override

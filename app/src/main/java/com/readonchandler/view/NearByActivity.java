@@ -2,6 +2,7 @@ package com.readonchandler.view;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -22,6 +23,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.readonchandler.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import database.DBContentProvider;
+import database.DBHelper;
+import model.Event;
+
 public class NearByActivity extends FragmentActivity implements OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
 
     private boolean isGPSEnabled;
@@ -32,6 +40,7 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
 
     private int LOCATION_REQUEST_CODE = 101;
 
+    private List<Event> events;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +49,9 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
         mLocManager = (LocationManager) this.getSystemService(this.LOCATION_SERVICE);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         mLocManager = (LocationManager) this.getSystemService(this.LOCATION_SERVICE);
+        DBHelper dbHelper = DBHelper.getInstance(this);
+        SQLiteDatabase sqliteDB = dbHelper.getReadableDatabase();
+        events = DBContentProvider.getAllEvents(sqliteDB);
         if(mLocManager != null)
         {
             isGPSEnabled = mLocManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -94,10 +106,18 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
             mMap.setMyLocationEnabled(true);
             mProgressLayout.setVisibility(View.GONE);
         }
-        mMap.addMarker(new MarkerOptions().position(new LatLng(33.420534, -111.933983)).title("Event 1"+"\n"+"date: 5 oct"+"\n"+"Time 08:30 AM"+"\n"+"Location Tempe"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(33.436020, -112.043288)).title("Event 2"+"\n"+"date: 10 oct"+"\n"+"Time 10:30 AM"+"\n"+"Location Tucson"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(33.415184, -111.831472)).title("Event 3"+"\n"+"date: 15 oct"+"\n"+"Time 12:00 PM"+"\n"+"Location Flagstaff"));
-        CameraUpdate camerupdate = CameraUpdateFactory.newLatLngZoom(new LatLng(33.425510, -111.940005), 10);
+        double zoomLatitude = 33;
+        double zoomLongitude = 110;
+        if(events != null && events.size() > 0){
+            for(int i = 0; i < events.size(); i++){
+                if(i == 0){
+                    zoomLatitude = events.get(i).getLatitude();
+                    zoomLongitude = events.get(i).getLongitude();
+                }
+                mMap.addMarker(new MarkerOptions().position(new LatLng(events.get(i).getLatitude(), events.get(i).getLongitude())).title("Event 1"+"\n"+"date: 5 oct"+"\n"+"Time 08:30 AM"+"\n"+"Location Tempe"));
+            }
+        }
+        CameraUpdate camerupdate = CameraUpdateFactory.newLatLngZoom(new LatLng(zoomLatitude, zoomLongitude), 10);
         mMap.moveCamera(camerupdate);
 
     }
@@ -116,6 +136,11 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
             }
 
         }
+    }
+
+    private class LocationInfo {
+        public double latitude;
+        public double longitude;
     }
 
 }

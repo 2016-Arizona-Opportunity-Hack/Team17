@@ -22,7 +22,7 @@ public class CustomCalendarAdapter extends BaseAdapter {
     private static final String TAG = CustomCalendarAdapter.class.getName();
     Context mContext;
     LayoutInflater inflater;
-    private List<EventsModel> events_list;
+    private List<Event> events_list;
 
     public CustomCalendarAdapter(Context context, List<Event> events) {
         mContext = context;
@@ -59,9 +59,9 @@ public class CustomCalendarAdapter extends BaseAdapter {
 
         // getting eventlist data for the row
 
-        EventsModel m = events_list.get(position);
-        title.setText(m.getTitle());
-        time.setText(m.getTime());
+        Event event= events_list.get(position);
+        title.setText(event.getName());
+        time.setText(event.getTime());
 
         return convertView;
     }
