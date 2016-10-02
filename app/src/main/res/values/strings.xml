@@ -6,4 +6,11 @@
     <string name="calendar">Calendar</string>
     <string name="title_activity_near_by">NearBy</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC8pIOIzptLf-RhIWpgg0cBXAHNJ_kzl4c</string>
+
+    <!--Manual screen strings-->
+    <string name="manual_early_literacy_families">Early Literacy Guide for Families:\nhttp://readonarizona.org/wp-content/themes/read-on/PDF/ROAEarlyLiteracyGuideforFamiliesv.1.pdf</string>
+    <string name="manual_building_blocks">Building Blocks of Arizona:\nhttp://www.azed.gov/early-childhood/files/2016/05/buildingblockswhat-we-know-works-read-on-az-ece-summer-conf.final_.pdf</string>
+    <string name="manual_childcare">Child care guide:\nhttp://readonarizona.org/wp-content/themes/read-on/PDF/ROAEarlyLiteracyGuideforFamiliesv.1.pdf</string>
+    <string name="manual_early_parenting">Literarcy traing for parents:\nhttp://readonarizona.org/wp-content/themes/read-on/PDF/ROAEarlyLiteracyGuideforFamiliesv.1.pdf</string>
+
 </resources>
