@@ -1,6 +1,8 @@
 package com.readonchandler.view;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,15 +56,28 @@ public class CustomCalendarAdapter extends BaseAdapter {
         if (convertView == null)
             convertView = inflater.inflate(R.layout.calendar_day_list_row, null);
 
+
         TextView title = (TextView) convertView.findViewById(R.id.eventTitle);
         TextView time = (TextView) convertView.findViewById(R.id.eventTime);
 
         // getting eventlist data for the row
 
-        Event event= events_list.get(position);
+        final Event event= events_list.get(position);
         title.setText(event.getName());
         time.setText(event.getTime());
 
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             /*   Intent intent = new Intent(mContext,DetailActivty.class);
+                Bundle b = new Bundle();
+                b.putString("Title",event.getName());
+                b.putString("Time",event.getTime());
+                b.putString("EventDetail",event.getEventDetails());
+                b.putString("Link",event.getVideoLink());
+                mContext.startActivity(intent);
+  */          }
+        });
         return convertView;
     }
 

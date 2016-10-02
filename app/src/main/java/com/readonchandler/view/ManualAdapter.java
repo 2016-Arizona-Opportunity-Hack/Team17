@@ -54,7 +54,7 @@ public class ManualAdapter extends BaseAdapter {
         }
         if (convertView == null)
             convertView = inflater.inflate(R.layout.layout_manual_row, null);
-        
+
         TextView title = (TextView) convertView.findViewById(R.id.manualName);
         TextView link = (TextView) convertView.findViewById(R.id.manualLink);
 
