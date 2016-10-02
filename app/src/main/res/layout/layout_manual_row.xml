@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/manual_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_main_button_view_height"
+        android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginRight="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginEnd="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:layout_marginStart="@dimen/calender_view_eventlist_divider_margin_left_right"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/activity_main_button_view_margin"
+        android:layout_marginBottom="@dimen/activity_main_button_view_margin">
+        <TextView
+            android:id="@+id/manualName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/manual_main_text_view_size"/>
+        <TextView
+            android:id="@+id/manualLink"
+            android:layout_below="@id/manualName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/calender_view_eventlist_divider_margin_left_right"
+            android:textColor="@color/colorWhite"
+            android:autoLink="web"
+            android:textSize="@dimen/manual_main_text_view_size"/>
+    </RelativeLayout>
+
+</LinearLayout>

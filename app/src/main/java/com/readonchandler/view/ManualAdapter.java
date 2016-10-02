@@ -10,33 +10,35 @@ import android.widget.TextView;
 
 import com.readonchandler.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import model.Event;
+import model.Manual;
 
 /**
- * Created by Lakshmisagar on 10/1/2016.
+ * Created by Lakshmisagar on 10/2/2016.
  */
 
-public class CustomCalendarAdapter extends BaseAdapter {
-    private static final String TAG = CustomCalendarAdapter.class.getName();
+public class ManualAdapter extends BaseAdapter {
+    private static final String TAG = ManualAdapter.class.getName();
     Context mContext;
     LayoutInflater inflater;
-    public List<Event> events_list;
+    private List<Manual> manual_events_list = new ArrayList<Manual>();
 
-    public CustomCalendarAdapter(Context context, List<Event> events) {
+    public ManualAdapter(Context context, List<Manual> manualevents) {
         mContext = context;
-        events_list = events;
+        manual_events_list = manualevents;
     }
 
     @Override
     public int getCount() {
-        return events_list.size();
+        return manual_events_list.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return events_list.get(position);
+        return manual_events_list.get(position);
     }
 
     @Override
@@ -47,21 +49,20 @@ public class CustomCalendarAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        Log.d(TAG,"getView");
         if (inflater == null) {
             inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.calendar_day_list_row, null);
-
-        TextView title = (TextView) convertView.findViewById(R.id.eventTitle);
-        TextView time = (TextView) convertView.findViewById(R.id.eventTime);
+            convertView = inflater.inflate(R.layout.layout_manual_row, null);
+        
+        TextView title = (TextView) convertView.findViewById(R.id.manualName);
+        TextView link = (TextView) convertView.findViewById(R.id.manualLink);
 
         // getting eventlist data for the row
 
-        Event event= events_list.get(position);
+        Manual event= manual_events_list.get(position);
         title.setText(event.getName());
-        time.setText(event.getTime());
+        link.setText(event.getLink());
 
         return convertView;
     }

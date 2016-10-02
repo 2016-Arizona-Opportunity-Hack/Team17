@@ -52,6 +52,7 @@ public class FbMessagingService extends FirebaseMessagingService {
 
                 DBContentProvider.insertEvent(db, event);
             }else{
+                manual = new Manual();
                 manual.setName(result[i++]);
                 manual.setLink(result[i++]);
                 DBContentProvider.insertManual(db,manual);

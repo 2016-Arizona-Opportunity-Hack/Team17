@@ -10,95 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.readonchandler.view.Manuals">
-
-
-        <RelativeLayout
-            android:id="@+id/manual_layout1"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/activity_main_button_view_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="@dimen/activity_main_button_view_margin"
-            android:layout_marginBottom="@dimen/activity_main_button_view_margin">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:text="@string/manual_building_blocks"
-                android:textColor="@color/colorWhite"
-                android:autoLink="web"
-                android:textSize="@dimen/manual_main_text_view_size"/>
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/manual_layout2"
-            android:layout_below="@id/manual_layout"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/activity_main_button_view_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="@dimen/activity_main_button_view_margin"
-            android:layout_marginBottom="@dimen/activity_main_button_view_margin">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:text="@string/manual_early_literacy_families"
-                android:textColor="@color/colorWhite"
-                android:autoLink="web"
-                android:textSize="@dimen/manual_main_text_view_size"/>
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/manual_layout3"
-            android:layout_below="@id/nearby_layout"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/activity_main_button_view_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="@dimen/activity_main_button_view_margin"
-            android:layout_marginBottom="@dimen/activity_main_button_view_margin">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:text="@string/manual_childcare"
-                android:textColor="@color/colorWhite"
-                android:autoLink="web"
-                android:textSize="@dimen/manual_main_text_view_size"/>
-        </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/manual_layout4"
-        android:layout_below="@id/nearby_layout"
+    <ListView
+        android:id="@+id/manualListView"
+        android:layout_below="@id/eventTextId"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_main_button_view_height"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="@dimen/activity_main_button_view_margin"
-        android:layout_marginBottom="@dimen/activity_main_button_view_margin">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/manual_building_blocks"
-            android:textColor="@color/colorWhite"
-            android:autoLink="web"
-            android:textSize="@dimen/manual_main_text_view_size"/>
-    </RelativeLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent">
+    </ListView>
 
 </LinearLayout>
