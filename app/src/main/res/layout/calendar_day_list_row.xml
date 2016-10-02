@@ -5,10 +5,11 @@
 
     <!-- Event Title -->
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/eventTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/calendar_row_title_view_size"
+        android:layout_marginTop="4dip"
         android:textStyle="bold" />
 
     <!-- Event Time -->
@@ -16,7 +17,7 @@
         android:id="@+id/eventTime"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
+        android:layout_below="@id/eventTitle"
         android:layout_marginTop="1dip"
         android:textSize="@dimen/calendar_row_time_view_size" />
 
