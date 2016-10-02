@@ -66,6 +66,7 @@ public class CalendarActivty extends AppCompatActivity {
    //Temporary set dat in events  model
     public List<Event> getEventsdata(String date)
     {
+        List<Event> eventList = new ArrayList<Event>();
         DBHelper helper = DBHelper.getInstance(mContext);
         SQLiteDatabase sqLiteDatabase = helper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.query(DatabaseContract.Events.TABLE_NAME, new String[]{}, date, null, null, null, null);
