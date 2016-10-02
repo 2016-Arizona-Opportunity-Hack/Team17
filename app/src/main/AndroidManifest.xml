@@ -46,6 +46,24 @@
         <activity
             android:name="com.readonchandler.view.CalendarActivty"
             android:label="@string/calendar"></activity>
+
+        <service
+            android:name="control.FbMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="control.FbInstanceIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
