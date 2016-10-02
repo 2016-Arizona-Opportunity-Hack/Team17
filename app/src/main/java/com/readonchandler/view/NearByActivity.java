@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -27,7 +28,7 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
     private GoogleMap mMap;
     private LocationManager mLocManager;
 
-    private ProgressBar mLocationProgress;
+    private RelativeLayout mProgressLayout;
 
     private int LOCATION_REQUEST_CODE = 101;
 
@@ -35,7 +36,7 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_near_by);
-        mLocationProgress = (ProgressBar) findViewById(R.id.location_progress);
+        mProgressLayout = (RelativeLayout) findViewById(R.id.progress_layout);
         mLocManager = (LocationManager) this.getSystemService(this.LOCATION_SERVICE);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         mLocManager = (LocationManager) this.getSystemService(this.LOCATION_SERVICE);
@@ -73,7 +74,7 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
         if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) ==
                 PackageManager.PERMISSION_GRANTED){
             mMap.setMyLocationEnabled(true);
-            mLocationProgress.setVisibility(View.GONE);
+            mProgressLayout.setVisibility(View.GONE);
         }
 
      }
@@ -91,7 +92,7 @@ public class NearByActivity extends FragmentActivity implements OnMapReadyCallba
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         } else {
             mMap.setMyLocationEnabled(true);
-            mLocationProgress.setVisibility(View.GONE);
+            mProgressLayout.setVisibility(View.GONE);
         }
         mMap.addMarker(new MarkerOptions().position(new LatLng(33.420534, -111.933983)).title("Event 1"+"\n"+"date: 5 oct"+"\n"+"Time 08:30 AM"+"\n"+"Location Tempe"));
         mMap.addMarker(new MarkerOptions().position(new LatLng(33.436020, -112.043288)).title("Event 2"+"\n"+"date: 10 oct"+"\n"+"Time 10:30 AM"+"\n"+"Location Tucson"));
