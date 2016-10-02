@@ -7,6 +7,7 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import database.DBContentProvider;
+import database.DBHelper;
 import model.Event;
 import model.Manual;
 
@@ -25,7 +26,8 @@ public class FbMessagingService extends FirebaseMessagingService {
         // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
         String message = "";
         message = message+"From: " + remoteMessage.getFrom();
-
+        DBHelper dbHelper = DBHelper.getInstance(getApplicationContext());
+        db = dbHelper.getWritableDatabase();
         // Check if message contains a data payload.
 
         //Added the parsing logic

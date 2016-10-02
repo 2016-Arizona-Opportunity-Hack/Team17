@@ -3,6 +3,7 @@ package com.readonchandler.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Bundle data = getIntent().getExtras();
         manualLayout = (RelativeLayout) findViewById(R.id.manual_layout);
         nearbyLayout = (RelativeLayout) findViewById(R.id.nearby_layout);
         calendarLayout = (RelativeLayout) findViewById(R.id.calendar_layout);
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         manualLayout.setOnClickListener(this);
         nearbyLayout.setOnClickListener(this);
         calendarLayout.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Bundle data = intent.getExtras();
+        String something = "something log value";
+        Log.d("something", something);
     }
 
     @Override

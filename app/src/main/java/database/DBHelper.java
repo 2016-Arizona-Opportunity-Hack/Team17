@@ -17,9 +17,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     private Context context;
 
-    private DBHelper sInstance;
+    private static DBHelper sInstance;
 
-    public synchronized DBHelper getInstance(Context context){
+    public static synchronized DBHelper getInstance(Context context){
         if(sInstance == null){
             sInstance = new DBHelper(context);
         }
