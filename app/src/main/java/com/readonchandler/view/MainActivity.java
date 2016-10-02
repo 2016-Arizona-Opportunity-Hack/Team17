@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected RelativeLayout manualLayout;
     protected RelativeLayout nearbyLayout;
     protected RelativeLayout calendarLayout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.nearby_layout:
-                
+                Intent nearByIntent = new Intent(this, NearByActivity.class);
+                startActivity(nearByIntent);
                 break;
 
             case R.id.calendar_layout:
